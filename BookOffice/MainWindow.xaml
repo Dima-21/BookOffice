@@ -42,7 +42,12 @@
             </MenuItem>
         </Menu>
         <Grid DockPanel.Dock="Left">
-            <TreeView x:Name="ListofContent"
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <TreeView x:Name="ListofContent" Grid.Column="0"
                       ItemsSource="{Binding Source={StaticResource contentProvider}, 
                 XPath=document}"
                       SelectedValuePath="@id" SelectedItemChanged="ListofContent_SelectedItemChanged">
@@ -55,14 +60,15 @@
                     </HierarchicalDataTemplate>
                 </TreeView.ItemTemplate>
             </TreeView>
+            <GridSplitter Grid.Column="1" Width="3" 
+                                  VerticalAlignment="Stretch"
+                                  HorizontalAlignment="Center"/>
+            <Grid Grid.Column="2">
+                <FlowDocumentReader x:Name="Reader"></FlowDocumentReader>
+            </Grid>
         </Grid>
-        <GridSplitter HorizontalAlignment="Right" 
-                  VerticalAlignment="Stretch" 
-                  Grid.Column="1" ResizeBehavior="PreviousAndNext"
-                  Width="5" Background="#FFBCBCBC"/>
+       
 
-        <Grid>
-
-        </Grid>
+      
     </DockPanel>
 </Window>

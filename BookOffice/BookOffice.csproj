@@ -75,9 +75,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Data\300.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Data\200.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Data\400.xaml">
       <SubType>Designer</SubType>

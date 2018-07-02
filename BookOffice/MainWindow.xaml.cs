@@ -33,8 +33,8 @@ namespace BookOffice
             {
             String key = ListofContent.SelectedValue.ToString();
             String path = @"..\..\Data\" + key + ".xaml";
-            var doc = (FlowDocument)XamlReader.Load(File.OpenRead(path));
-                //Reader.Document = (FlowDocument)XamlReader.Load(File.OpenRead(path));
+           
+             Reader.Document = (FlowDocument)XamlReader.Load(File.OpenRead(path));
             }
             catch(Exception err)
             {
