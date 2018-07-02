@@ -5,8 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookOffice"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        WindowState="Maximized"
+        Title="MainWindow" Height="600" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem>
+                <MenuItem.Header>
+                    <WrapPanel>
+                        <Image Source="Icons/page.ico" Width="26" />
+                        <Label Content="Документы" />
+                    </WrapPanel>
+                </MenuItem.Header>
+                <MenuItem Header="Открыть документ"/>
+                <MenuItem Header="Закрыть документ"/>
+                <MenuItem Header="Выйти из программы"/>
+            </MenuItem>
+            <MenuItem>
+                <MenuItem.Header>
+                    <WrapPanel>
+                        <Image Source="Icons/editor.ico" Width="26" />
+                        <Label Content="Редактирование" />
+                    </WrapPanel>
+                </MenuItem.Header>
+                <MenuItem Header="Открыть редактор"/>
+                <MenuItem Header="Закрыть редактор"/>
+            </MenuItem>
+            <MenuItem>
+                <MenuItem.Header>
+                    <WrapPanel>
+                        <Image Source="Icons/info.ico" Width="26" />
+                        <Label Content="О программе" />
+                    </WrapPanel>
+                </MenuItem.Header>
+                <MenuItem Header="Об авторах"/>
+                <MenuItem Header="Информация о программе"/>
+            </MenuItem>
+        </Menu>
+        <Grid DockPanel.Dock="Left">
+            <TreeView x:Name="ListofContent"
+                      ItemsSource="{Binding Source={StaticResource contentProvider}, 
+                XPath=document}"
+                      SelectedValuePath="@id" SelectedItemChanged="ListofContent_SelectedItemChanged">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding XPath=item}">
+                        <WrapPanel Margin="0 4">
+                            <Image Source="{Binding XPath=@icon}" Width="26"/>
+                            <Label Content="{Binding XPath=@title}"/>
+                        </WrapPanel>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
+        </Grid>
+        <GridSplitter HorizontalAlignment="Right" 
+                  VerticalAlignment="Stretch" 
+                  Grid.Column="1" ResizeBehavior="PreviousAndNext"
+                  Width="5" Background="#FFBCBCBC"/>
+
+        <Grid>
+
+        </Grid>
+    </DockPanel>
 </Window>

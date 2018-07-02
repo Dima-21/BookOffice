@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:BookOffice"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="DictionaryStyle/Style.xaml"/>
+                <ResourceDictionary Source="DataProviders.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

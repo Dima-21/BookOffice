@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<document id="000" title="Краткий справочник по WPF" icon="Icons/book.ico">
+  <item id="100" title="Введенеие в WPF" icon="Icons/dir.ico">
+    <item id="101" title="История WPF" icon="Icons/doc.ico"/>
+    <item id="102" title="Преимущества WPF" icon="Icons/doc.ico"/>
+    <item id="103" title="Перспективы WPF" icon="Icons/doc.ico"/>
+  </item>
+  <item id="200" title="Контейнеры компоновки" icon="Icons/dir.ico"> 
+    <item id="201" title="UniformGrid" icon="Icons/doc.ico"/>
+    <item id="202" title="Grid" icon="Icons/doc.ico"/>
+    <item id="203" title="StackPanel" icon="Icons/doc.ico"/>
+   <item id="204" title="WrapPanel" icon="Icons/doc.ico"/>
+    <item id="205" title="DockPanel" icon="Icons/doc.ico"/>
+    <item id="206" title="Canvas" icon="Icons/doc.ico"/>
+   <item id="207" title="InkCanvas" icon="Icons/doc.ico"/>
+  </item>
+  <item id="300" title="Базовые элементы управления" icon="Icons/dir.ico"> </item>
+  <item id="400" title="Списочные элементы управления" icon="Icons/dir.ico"> </item>
+  <item id="500" title="Привязки к источникам данных" icon="Icons/dir.ico"> </item>
+</document>

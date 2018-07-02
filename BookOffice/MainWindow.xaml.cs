@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Markup;
+using System.IO;
 
 namespace BookOffice
 {
@@ -23,6 +25,21 @@ namespace BookOffice
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ListofContent_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            try
+            {
+            String key = ListofContent.SelectedValue.ToString();
+            String path = @"..\..\Data\" + key + ".xaml";
+            var doc = (FlowDocument)XamlReader.Load(File.OpenRead(path));
+                //Reader.Document = (FlowDocument)XamlReader.Load(File.OpenRead(path));
+            }
+            catch(Exception err)
+            {
+                MessageBox.Show("Файл не найден", "Сообщение", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
