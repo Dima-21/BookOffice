@@ -67,8 +67,6 @@
                 <FlowDocumentReader x:Name="Reader"></FlowDocumentReader>
             </Grid>
         </Grid>
-       
-
-      
+        
     </DockPanel>
 </Window>

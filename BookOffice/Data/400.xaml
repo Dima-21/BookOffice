@@ -10,6 +10,6 @@
         </Style>
     </FlowDocument.Resources>
     <Paragraph FontSize="48" Foreground="Red" Margin="20 200 20 0">
-        Введение в WPF
+        Списочные элементы управления
     </Paragraph>
 </FlowDocument>
